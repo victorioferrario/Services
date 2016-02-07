@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LG.Services.CDMS.FamilyHistoryRecord">
+    <Position X="3" Y="2.5" Width="4.75" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LG.Services.CDMS.MedicationTaken">
+    <Position X="5.75" Y="7.25" Width="5.75" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LG.Services.CDMS.MedicationTaken_Insert">
+    <Position X="1" Y="7.75" Width="4.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

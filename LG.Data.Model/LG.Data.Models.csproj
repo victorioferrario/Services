@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E017D4A3-4932-4386-A7E2-435CD848E1A9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LG.Data.Models</RootNamespace>
+    <AssemblyName>LG.Data.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\Projects\1800MD-Members\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Applications\Area.cs" />
+    <Compile Include="Applications\IMenuItem.cs" />
+    <Compile Include="Applications\MenuItem.cs" />
+    <Compile Include="Applications\MenuItemListData.cs" />
+    <Compile Include="Applications\Navigation.cs" />
+    <Compile Include="Auth\SecurityInfo.cs" />
+    <Compile Include="BaseModel.cs" />
+    <Compile Include="Clients\BusinessSettings.cs" />
+    <Compile Include="Clients\Client.cs" />
+    <Compile Include="Clients\EligibilityData.cs" />
+    <Compile Include="Clients\Group.cs" />
+    <Compile Include="Clients\MembershipPlan.cs" />
+    <Compile Include="Clients\SearchResult.cs" />
+    <Compile Include="Clinical\AllergyResults.cs" />
+    <Compile Include="Clinical\Audio.cs" />
+    <Compile Include="Clinical\Consultation.cs" />
+    <Compile Include="Clinical\MessageEntity.cs" />
+    <Compile Include="Clinical\RxNTSearch.cs" />
+    <Compile Include="Core\EntityBase.cs" />
+    <Compile Include="Core\RolodexItemObject.cs" />
+    <Compile Include="Doctors\ConsultWizard\MessageExchange.cs" />
+    <Compile Include="Doctors\ConsultWizard\PlanOfCare.cs" />
+    <Compile Include="Doctors\ConsultWizard\SearchDiagnosis.cs" />
+    <Compile Include="Doctors\ConsultWizard\StartClickToCall.cs" />
+    <Compile Include="Doctors\Doctor.cs" />
+    <Compile Include="Doctors\Schedule\Entity.cs" />
+    <Compile Include="Doctors\Search.cs" />
+    <Compile Include="Enums\Actions.cs" />
+    <Compile Include="Enums\Applications\Enums.cs" />
+    <Compile Include="Enums\Applications\MenuItemType.cs" />
+    <Compile Include="Enums\AuthGraph\AccessModeEnum.cs" />
+    <Compile Include="Enums\AuthGraph\AccessTypeEnum.cs" />
+    <Compile Include="Enums\AuthGraph\ActionModeEnum.cs" />
+    <Compile Include="Enums\BusinessLevel.cs" />
+    <Compile Include="Enums\Clinical.cs" />
+    <Compile Include="Enums\CoverageCode.cs" />
+    <Compile Include="Enums\Helpers\ParseUtility.cs" />
+    <Compile Include="Enums\RolodexItemType.cs" />
+    <Compile Include="Enums\SearchType.cs" />
+    <Compile Include="Identity\ApplicationFactory.cs" />
+    <Compile Include="Identity\ApplicationUser.cs" />
+    <Compile Include="Identity\Graph\AccessEntity.cs" />
+    <Compile Include="Identity\Graph\AccessSope.cs" />
+    <Compile Include="Identity\Graph\AuthGraphEntity.cs" />
+    <Compile Include="Identity\Application.cs" />
+    <Compile Include="Identity\Graph\AccessConfiguration.cs" />
+    <Compile Include="Members\Account.cs" />
+    <Compile Include="Members\Entity.cs" />
+    <Compile Include="Members\Member.cs" />
+    <Compile Include="Members\MemberInstance.cs" />
+    <Compile Include="Members\SortedPageResults.cs" />
+    <Compile Include="Orders\Order.cs" />
+    <Compile Include="Products\BaseProductModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\ConsultMetrics.cs" />
+    <Compile Include="Shared\Address.cs" />
+    <Compile Include="Shared\CommonInfoRecords.cs" />
+    <Compile Include="Shared\Contact.cs" />
+    <Compile Include="Shared\EmailAddress.cs" />
+    <Compile Include="Shared\File.cs" />
+    <Compile Include="Shared\PersonInfo.cs" />
+    <Compile Include="Shared\PhoneBase.cs" />
+    <Compile Include="Shared\SecurityInfo.cs" />
+    <Compile Include="Shared\ValidEmail.cs" />
+    <Compile Include="Shared\ValueItem.cs" />
+    <Compile Include="Users\ParseFactory.cs" />
+    <Compile Include="Identity\UserEntityBase.cs" />
+    <Compile Include="Users\UserIdenty.cs" />
+    <Compile Include="Users\UserListModel.cs" />
+    <Compile Include="Users\UserModel.cs" />
+    <Compile Include="Utilities\EnumConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\..\Users\victo\Source\Workspaces\1800MD Web\Development\Libs\Services\LG.Azure\LG.Azure.csproj">
+      <Project>{ca0b2a0f-79f7-4fa5-93a6-aec400f1a4c3}</Project>
+      <Name>LG.Azure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LG.Services\LG.Services.csproj">
+      <Project>{b0bb0799-8193-44ff-a40b-d768fabfaa30}</Project>
+      <Name>LG.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Graph\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Doctors\ConsultWizard\StartClickToCall.cs.d.ts">
+      <DependentUpon>StartClickToCall.cs</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="orders.ts" />
+    <TypeScriptCompile Include="Shared\Contact.cs.d.ts">
+      <DependentUpon>Contact.cs</DependentUpon>
+    </TypeScriptCompile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

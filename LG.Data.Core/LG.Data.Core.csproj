@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2EB4FE4D-45DB-49E9-8AD9-4D128459745E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LG.Data.Core</RootNamespace>
+    <AssemblyName>LG.Data.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\Projects\1800MD-Members\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Auth\AuthDataService.cs" />
+    <Compile Include="Auth\AuthenticationManager.cs" />
+    <Compile Include="Auth\AuthenticationOperations.cs" />
+    <Compile Include="Auth\Utilities\AuthGraphInterpretor.cs" />
+    <Compile Include="Auth\Utilities\AuthGraphStaticXNames.cs" />
+    <Compile Include="Clients\BusinessSettings.cs" />
+    <Compile Include="Clients\ClientDataService.cs" />
+    <Compile Include="Clients\Details\Common.cs" />
+    <Compile Include="Clients\Details\GeneralSettings.cs" />
+    <Compile Include="Clients\ElibibiltyFullfillment.cs" />
+    <Compile Include="Clients\GroupDataService.cs" />
+    <Compile Include="Clients\MembershipDataService.cs" />
+    <Compile Include="Clients\SearchDataService.cs" />
+    <Compile Include="Clients\ContactDataService.cs" />
+    <Compile Include="Clinical\AudioManagementDataService.cs" />
+    <Compile Include="Clinical\ClinicalDataService.cs" />
+    <Compile Include="Clinical\ConsultHistoryDataService.cs" />
+    <Compile Include="Clinical\MessagingService.cs" />
+    <Compile Include="Clinical\RxNTServices.cs" />
+    <Compile Include="Doctors\ConsultationWizardServicing.cs" />
+    <Compile Include="Doctors\DoctorsDataService.cs" />
+    <Compile Include="Doctors\Schedule\ScheduleDataService.cs" />
+    <Compile Include="Graph\GraphDataService.cs" />
+    <Compile Include="Members\AccountDataService.cs" />
+    <Compile Include="Members\SaveDataService.cs" />
+    <Compile Include="Members\MemberDataService.cs" />
+    <Compile Include="Orders\OrderDataService.cs" />
+    <Compile Include="Orders\OrderDetailServices.cs" />
+    <Compile Include="Products\ProductDataService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\ConsultationReports.cs" />
+    <Compile Include="Shared\CommonInfoDataService.cs" />
+    <Compile Include="Shared\EntityDataService.cs" />
+    <Compile Include="Shared\LoadPersonInfo.cs" />
+    <Compile Include="Shared\SaveContactInformation.cs" />
+    <Compile Include="Shared\SecurityInformationDataService.cs" />
+    <Compile Include="Users\UsersDataService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LG.Data.Model\LG.Data.Models.csproj">
+      <Project>{e017d4a3-4932-4386-a7e2-435cd848e1a9}</Project>
+      <Name>LG.Data.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LG.Services\LG.Services.csproj">
+      <Project>{b0bb0799-8193-44ff-a40b-d768fabfaa30}</Project>
+      <Name>LG.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Users\internal\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
